@@ -1,0 +1,172 @@
+<html lang="en"><head>
+   <title>Q and A</title>
+   <meta charset="utf-8">
+    <style>
+        li
+        {
+            font-size:24px; 
+            padding-top: 10px;
+        }
+        
+        p
+        {
+            font-size:20px;
+            padding-top: 2px;
+        }
+        
+        h1,h2
+        {
+         text-align: center; 
+        
+        }
+      
+        
+    </style>
+   </head>
+   <body>
+       <h1>HTTP &amp; Security</h1>
+       <h2> Question Answers</h2>
+       <br>
+       <br>
+       <br>
+       <ol>
+           <li> What is the Hypertext Transfer Protocol (HTTP)?
+                <p>
+                    Hypertext Transfer Protocol(HTTP) is a protocol which allows the fetching of resources,
+                    such as HTML documents. It is the foundation of any data exchange 
+                    on the Web and a client-server protocol,
+                    which means requests are initiated by the recipient, 
+                    usually the Web browser. A complete document is reconstructed
+                    from the different sub-documents fetched, for instance text, 
+                    layout description, images, videos, scripts, and more.
+               </p>
+           </li>
+           
+           <li>Why is HTTP called a stateless protocol?
+               <p>
+                   HTTP is called a stateless protocol because 
+                   there is no link between two requests being successively carried 
+                   out on the same connection.
+                </p>
+           </li>
+           
+        
+           <li>Describe the three phases of establishing a session using client-server protocols such as HTTP.
+
+               <p> 
+                   The three phases of establishing a session using client-server protocols such as HTTP are as follows:
+                  1.The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).
+                  2.The client sends its request, and waits for the answer.
+                  3.The server processes the request, sending back its answer, providing a status code and appropriate data.
+              </p>
+           </li>
+           
+
+           <li>Describe the parameters on a get and post request.
+            <p>
+                The HTTP GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+                <br>
+                <br>
+                *Request has body:No<br>
+                *Successful response has body:Yes<br>
+                *Safe:Yes<br>
+                *Idempotent:Yes<br>
+                *Cacheable:Yes<br>
+                *Allowed in HTML forms:Yes<br>
+               
+                <br>
+                <br>
+                <br>
+                When the POST request is sent via a method other than an HTML form — like via an XMLHttpRequest — the body can take any type. As described in the HTTP 1.1 specification, POST is designed to allow a uniform method to cover the following functions:
+                <br>
+                <br>
+                
+                *Annotation of existing resources<br>
+                *Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles;<br>
+                *Adding a new user through a signup modal;<br>
+                *Providing a block of data, such as the result of submitting a form, to a data-handling process;<br>
+                *Extending a database through an append operation.<br>
+                <br>
+                <br>
+                *Request has body:Yes<br>
+                *Successful response has body:Yes<br>
+                *Safe:No<br>
+                *Idempotent:No<br>
+                *Cacheable:Only if freshness information is included<br>
+                *Allowed in HTML forms:Yes<br>
+                
+               
+            </p>
+           
+           </li>
+           
+
+            <li>What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?
+               <p>
+                    HTTP response status codes indicate whether a specific HTTP request has been successfully completed. 
+                   Responses are grouped in five classes: informational responses,
+                   successful responses, redirects, client errors, and servers 
+                   errors. 
+                <br>
+                    HTTP status code 200 indicates that the request has succeeded which varies depending on the HTTP methods GET,HEAD,PUT or POST and TRACE.
+                    HTTP status code 404 indicates that the requested resource could not be found by the server whereas in browser means URL not recognized.
+               </p>
+           </li>
+           
+            <li>What are HTTP cookies? Give an example.
+               <p>
+                   An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to the user's web browser.
+                  The browser may store it and send it back with the next request
+                 to the same server. For example: Keeping a user logged in to check if the two request came from the same browser.
+              </p>
+           </li>
+           
+
+            <li>Why are cookies a security issue?
+
+               <p>
+                Information should be stored in cookies with the understanding
+                that all cookie values will be visible to and can be changed 
+                by the end-user which leads to the risk of information 
+                stored to be misused because of which cokkies are a security issue.\
+                </p>
+           </li>
+           
+                      
+            <li>Describe session hijacking and XSS.
+               <p>
+                   Cookies are often used in web application to identify a user and their authenticated session, so stealing a
+                   cookie can lead to hijacking the authenticated user's session.
+                   One of the ways to steal cookies is exploiting an XXS.
+                </p>
+           </li>
+           
+           
+            <li>Describe Cross-site request forgery(CSRF).
+           <p>
+               In this situation, someone includes an image that isn’t really an image (for example in an unfiltered chat or forum), 
+               instead it really is a request to your bank’s server to withdraw 
+               money: Now, if you are logged into your bank account and your cookies are still valid (and there is no other validation),
+               you will transfer money as soon as you load the HTML that 
+               contains this image.This is known as Cross-site request forgery(CSRF) .
+            </p>
+           </li>
+           
+           
+            <li>What are Cross-site HTTP requests (CORS) and what requests use CORS?
+               <p>
+                  Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell a browser to let a web 
+                   application running at one origin (domain) have permission to 
+                   access selected resources from a server at a different origin.
+                   <br>
+                   The following request uses CORS:<br>
+                   1.Invocations of the XMLHttpRequest or Fetch APIs in a cross-site manner, as discussed above.<br>
+                   2.Web Fonts (for cross-domain font usage in @font-face within CSS), so that servers can deploy TrueType fonts that can only be cross-site loaded and used by web sites that are permitted to do so.<br>
+                   3.WebGL textures.<br>
+                   4.Images/video frames drawn to a canvas using drawImage().<br>
+                </p>
+           </li>
+           
+       </ol>
+   
+</body></html>
